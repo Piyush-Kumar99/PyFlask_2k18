@@ -1,137 +1,136 @@
 # Python Strings Examples
 
 # capitalize
-str = "this is string example....wow!!!";
-print "str.capitalize() : ", str.capitalize()
+s = "this is string example....wow!!!"
+print("s.capitalize() : ", s.capitalize())
+# Output: s.capitalize() :  This is string example....wow!!!
 
-str.capitalize() :  This is string example....wow!!!
+# count
+s = "this is string example....wow!!!"
+sub = "i"
+print ("s.count(sub, 4, 40) : ", s.count(sub, 4, 40))
+sub = "wow"
+print ("s.count(sub) : ", s.count(sub))
+# Output
+# s.count(sub, 4, 40) :  2
+# s.count(sub) :  1
 
-#count
-str = "this is string example....wow!!!";
-sub = "i";
-print "str.count(sub, 4, 40) : ", str.count(sub, 4, 40)
-sub = "wow";
-print "str.count(sub) : ", str.count(sub)
+# endswith
+s = "this is string example....wow!!!"
+suffix = "wow!!!"
+print (s.endswith(suffix))
+print (s.endswith(suffix,20))
+suffix = "is"
+print (s.endswith(suffix, 2, 4))
+print (s.endswith(suffix, 2, 6))
+# Output
+# True
+# True
+# True
+# False
 
-str.count(sub, 4, 40) :  2
-str.count(sub) :  1
+# find
+str1 = "this is string example....wow!!!"
+str2 = "exam"
+print (str1.find(str2))
+print (str1.find(str2, 10))
+print (str1.find(str2, 40))
+# Output
+# 15
+# 15
+# -1
 
-#endswith
-str = "this is string example....wow!!!";
-suffix = "wow!!!";
-print str.endswith(suffix)
-print str.endswith(suffix,20)
-suffix = "is";
-print str.endswith(suffix, 2, 4)
-print str.endswith(suffix, 2, 6)
+# isalnum
+s= "this2009"  # No space in this string
+print (s.isalnum())
+s= "this is string example....wow!!!"
+print (s.isalnum())
+# Output
+# True
+# False
 
-True
-True
-True
-False
+# isalpha
+s= "this"  # No space & digit in this string
+print (s.isalpha())
+s= "this is string example....wow!!!"
+print (s.isalpha())
+# Output
+# True
+# False
 
-#find
-str1 = "this is string example....wow!!!";
-str2 = "exam";
-print str1.find(str2)
-print str1.find(str2, 10)
-print str1.find(str2, 40)
+# isdigit
+s= "123456"  # Only digit in this string
+print (s.isdigit())
+s= "this is string example....wow!!!"
+print (s.isdigit())
+# Output
+# True
+# False
 
-15
-15
--1
+# islower
+s= "THIS is string example....wow!!!" 
+print (s.islower())
+s= "this is string example....wow!!!"
+print (s.islower())
+# Output
+# False
+# True
 
-#isalnum
-str = "this2009";  # No space in this string
-print str.isalnum()
-str = "this is string example....wow!!!";
-print str.isalnum()
-
-True
-False
-
-#isalpha
-str = "this";  # No space & digit in this string
-print str.isalpha()
-str = "this is string example....wow!!!";
-print str.isalpha()
-
-True
-False
-
-#isdigit
-str = "123456";  # Only digit in this string
-print str.isdigit()
-str = "this is string example....wow!!!";
-print str.isdigit()
-
-True
-False
-
-#islower
-str = "THIS is string example....wow!!!"; 
-print str.islower()
-str = "this is string example....wow!!!";
-print str.islower()
-
-False
-True
-
-#isalnum
-str = u"this2009";  
-print str.isnumeric()
-str = u"23443434";
-print str.isnumeric()
-
-False
-True
+# isalnum
+s= "this2009"  
+print (s.isnumeric())
+s= "23443434"
+print (s.isnumeric())
+#Output
+#False
+#True
 
 #isupper
-str = "THIS IS STRING EXAMPLE....WOW!!!"; 
-print str.isupper()
-str = "THIS is string example....wow!!!";
-print str.isupper()
-
-True
-False
+s= "THIS IS STRING EXAMPLE....WOW!!!" 
+print (s.isupper())
+s= "THIS is string example....wow!!!"
+print (s.isupper())
+#Output
+#True
+#False
 
 #len
-str = "this is string example....wow!!!";
-print "Length of the string: ", len(str)
-
-Length of the string:  32
+s= "this is string example....wow!!!"
+print ("Length of the string: ", len(s))
+#Output
+#Length of the string:  32
 
 #islower
-str = "THIS IS STRING EXAMPLE....WOW!!!";
-print str.lower()
-
-this is string example....wow!!!
+s= "THIS IS STRING EXAMPLE....WOW!!!"
+print (s.lower())
+#Output
+#this is string example....wow!!!
 
 #strip
-str = "0000000this is string example....wow!!!0000000";
-print str.strip( '0' )
-
-this is string example....wow!!!
+s= "0000000this is string example....wow!!!0000000"
+print (s.strip('0'))
+#Output
+#this is string example....wow!!!
 
 #replace
-str = "this is string example....wow!!! this is really string"
-print str.replace("is", "was")
-print str.replace("is", "was", 3)
-
-thwas was string example....wow!!! thwas was really string
-thwas was string example....wow!!! thwas is really string
+s= "this is string example....wow!!! this is really string"
+print (s.replace("is", "was"))
+print (s.replace("is", "was", 3))
+#Output
+#thwas was string example....wow!!! thwas was really string
+#thwas was string example....wow!!! thwas is really string
 
 #join
-s = "-";
-seq = ("a", "b", "c"); # This is sequence of strings.
-print s.join( seq )
-
-a-b-c
+s = "-"
+seq = ("a", "b", "c") # This is sequence of strings.
+print (s.join( seq ))
+#Output
+#a-b-c
 
 #split
-str = "Line1-abcdef \nLine2-abc \nLine4-abcd";
-print str.split( )
-print str.split(' ', 1 )
-
-['Line1-abcdef', 'Line2-abc', 'Line4-abcd']
-['Line1-abcdef', '\nLine2-abc \nLine4-abcd']
+s= "Line1-abcdef \nLine2-abc \nLine4-abcd"
+print (s.split( ))
+print (s.split(' ', 1 ))
+#Output
+#['Line1-abcdef', 'Line2-abc', 'Line4-abcd']
+#['Line1-abcdef', '\nLine2-abc \nLine4-abcd']
